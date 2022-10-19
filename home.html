@@ -14,7 +14,7 @@
   <div class="content">
     <header>Login</header>
 
-<form action="next_page.php" method="post">
+<form action="contact.html" method="post">
   <div class="field">
     <span class="fa fa-user"></span>
     <input type="text" required placeholder=" Username " name="username" required>
@@ -33,10 +33,12 @@
 </div>
 </form>
 <script>
-  function hrefFunction()
-  {
-      windows.location.href = "../contact.html";
-  }
-        </script>
+var connection = mysql.createConnection({
+ host : 'hostname',
+ user : 'username',
+ password : 'password',
+ database : 'databaseName'
+});
+</script>
 </body>
 </html>
