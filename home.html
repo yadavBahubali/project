@@ -21,8 +21,8 @@
     </div>
   <div class="field space">
       <span class="fa fa-lock"></span>
-      <input type="password" class="pass-key" required placeholder=" Password" name="password" required>/>
-      <span class="show">SHOW</span> 
+      <input type="password" class="pass-key" required placeholder=" Password" name="password" id="password" required>/>
+      <input type="checkbox" onclick="showPassword()">Show Password
   </div>
   <div class="pass">
       <a href="#">FORGOT PASSWORD</a>
@@ -40,5 +40,19 @@ var connection = mysql.createConnection({
  database : 'databaseName'
 });
 </script>
+  <script>
+  function showPassword()
+    {
+      var x = document.getElementbyId("password");
+      if(x.type === "password")
+      {
+        x.type="text";
+      }
+      else
+      {
+        x.type="password";
+      }
+    }
+  </script>
 </body>
 </html>
